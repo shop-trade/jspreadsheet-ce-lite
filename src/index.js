@@ -6567,25 +6567,6 @@ if (! jSuites && typeof(require) === 'function') {
                 }
             });
 
-            // Powered by Jspreadsheet
-            var ads = document.createElement('a');
-            ads.setAttribute('href', 'https://bossanova.uk/jspreadsheet/');
-            obj.ads = document.createElement('div');
-            obj.ads.className = 'jexcel_about';
-            try {
-                if (typeof(sessionStorage) !== "undefined" && ! sessionStorage.getItem('jexcel')) {
-                    sessionStorage.setItem('jexcel', true);
-                    var img = document.createElement('img');
-                    img.src = '//bossanova.uk/jspreadsheet/logo.png';
-                    ads.appendChild(img);
-                }
-            } catch (exception) {
-            }
-            var span = document.createElement('span');
-            span.innerHTML = 'Jspreadsheet CE';
-            ads.appendChild(span);
-            obj.ads.appendChild(ads);
-
             // Create table container TODO: frozen columns
             var container = document.createElement('div');
             container.classList.add('jexcel_table');
@@ -6617,7 +6598,6 @@ if (! jSuites && typeof(require) === 'function') {
             el.appendChild(obj.content);
             el.appendChild(obj.pagination);
             el.appendChild(obj.contextMenu);
-            el.appendChild(obj.ads);
             el.classList.add('jexcel_container');
 
             // Create toolbar
